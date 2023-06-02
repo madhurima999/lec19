@@ -10,3 +10,4 @@ c.addEventListener("click",e=>{console.log("capturing c")},{capture:true});
 gp.addEventListener("click",e=>console.log("bubbling"+e.target.textContent));
 p.addEventListener("click",e=>console.log("bubbling"+e.target.textContent));
 c.addEventListener("click",e=>console.log("bubbling"+e.target.textContent));
+ 
