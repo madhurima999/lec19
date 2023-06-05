@@ -43,3 +43,10 @@ app.listen("8000", (req,res)=>{
 
     console.log("server is running at port 8000".red)
 })
+
+
+
+// const a=require("give-me-a-joke");
+// a.getRandomDadJoke(function(a){
+//    console.log(a);
+// });
