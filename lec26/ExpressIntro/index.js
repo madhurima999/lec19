@@ -2,13 +2,14 @@
 const express = require("express");
 const colors = require("colors");
 
+
 const app = express()
 
 // console.log(app) 
 
 
 // app.use((req,res)=>{
-
+ 
 //     console.log(" application running");
 
 //     res.send(" hello from server");
@@ -48,5 +49,5 @@ app.listen("8000", (req,res)=>{
 
 // const a=require("give-me-a-joke");
 // a.getRandomDadJoke(function(a){
-//    console.log(a);
+//    console.log(a.red);
 // });
