@@ -4,7 +4,7 @@ const colors = require("colors");
 
 const app = express()
 
-// console.log(app)
+// console.log(app) 
 
 
 // app.use((req,res)=>{
