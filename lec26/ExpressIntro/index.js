@@ -1,6 +1,6 @@
 
 const express = require("express");
-// const colors = require("colors");
+const colors = require("colors");
 
 
 const app = express()
@@ -16,10 +16,11 @@ const app = express()
 
 // })
 
-// app.get("/",(req,res)=>{
+app.get("/",(req,res)=>{
+    res.send("home route");
 
-//     res.status(200).send("Home route!")
-// })
+   // res.status(200).send("Home route!")
+})
 
 
 // app.get("/product",(req,res)=>{
@@ -42,7 +43,7 @@ const app = express()
 
 app.listen("8000", (req,res)=>{
 
-    console.log("server is running at port 8000")
+    console.log("server is running at port 8000".red)
 })
 
 
