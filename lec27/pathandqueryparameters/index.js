@@ -33,7 +33,7 @@ app.get("/post/:postId/comments/:commentId",(req,res)=>{
 })
 
 app.get("/search", (req,res)=>{
-
+//localhost:3000/search?q=madhurima
     const { q } = req.query;
 
     res.send(` you ar searching for this ${q} post`)
