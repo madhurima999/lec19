@@ -17,29 +17,34 @@ const app = express()
 // })
 
 app.get("/",(req,res)=>{
-    res.send("home route");
+    // res.send("home route");
+ 
+    res.status(200).send("home route")
+ })
+app.get("/home",(req,res)=>{
+   // res.send("home route");
 
-   // res.status(200).send("Home route!")
+   res.status(500).send("Internal ServerError!")
 })
 
 
-// app.get("/product",(req,res)=>{
+app.get("/product",(req,res)=>{
 
-//     res.status(200).send("<h1>you are seeing some products</h1>")
-// })
-
-
-// app.get("/details",(req,res)=>{
-
-//     res.status(200).send({ some: 'json' })
-// })
+    res.status(200).send("<h1>you are seeing some products</h1>")
+})
 
 
-// app.all("*", (req,res)=>{
+app.get("/details",(req,res)=>{
 
-//     res.status(404).send("oops! file not found or wrong path!")
+    res.status(200).send({ some: 'json' })
+})
 
-// })
+//wildcard
+app.all("*", (req,res)=>{
+
+    res.status(404).send("oops! file not found or wrong path!")
+
+})
 
 app.listen("8000", (req,res)=>{
 
