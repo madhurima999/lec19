@@ -23,7 +23,7 @@ app.get("/",(req,res)=>{
 
 app.get("/random",(req,res)=>{
 
-    const randomNumber = Math.floor(Math.random()*10);
+    const randomNumber = Math.floor(Math.random()* 10);
 
     res.render("random", { favNumber: randomNumber})
 })
