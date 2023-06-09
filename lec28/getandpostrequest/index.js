@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 8000;
 const path = require("path")
+const multer = require("multer");
 const upload=multer();
 
 app.set("view engine", "ejs")
