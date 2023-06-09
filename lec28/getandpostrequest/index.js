@@ -2,14 +2,14 @@ const express = require("express");
 const app = express();
 const PORT = 8000;
 const path = require("path")
-
+const upload=multer();
 
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-
+app.use(upload.array());
 
 
 app.get("/",(req,res)=>{
