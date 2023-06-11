@@ -19,7 +19,7 @@ async function getMovies(searchText){
 
     for(let movie of movies){
 
-    //     const pattern = new RegExp(`^${searchText}(?!.*\\b${searchText}\\b)`, "i");
+        // const pattern = new RegExp(`^${searchText}(?!.*\\b${searchText}\\b)`, "i");
     
     // let movieName = movie.show.name;
     // const foundMovie = movieName.match(pattern);
@@ -32,8 +32,8 @@ async function getMovies(searchText){
 
              div.innerHTML = `<h1> ${movie.show.name}</h1>
              <p> year : ${movie.show.premiered}</p>
-             <p> runtime : ${movie.show.runtime}</p>
-            `
+             <p> runtime : ${movie.show.runtime}</p>`
+            
 
             const image = document.createElement("img");
             image.setAttribute("src", movie.show.image.medium);
@@ -45,7 +45,7 @@ async function getMovies(searchText){
      }
 }
 
-searchinput.addEventListener("keypress",(e)=>{
+searchInput.addEventListener("keypress",(e)=>{
 
     const searchText = searchInput.value;
 
