@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<%-include("./partials/header")%>
+    <h1>Movies Search</h1>
 
-    <h1> Movies Recommendation</h1>
-
-  
-    <label for="search"> Search Movie </label>
-    <input type="text" placeholder="search movieshere..." id="searchinput">
-
-
+    <form style="margin: 10px 0" action="/" method="POST">
+      <label for="search"> Search Movie </label>
+      <input
+        type="text"
+        placeholder="search movies"
+        id="searchinput"
+        name="searchText"
+      />
+    </form>
+      <div class="row">
+        <% for(let movie of movies) { %>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem">
+            <img src="<%= movie.image %>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3 class="card-title"><%= movie.name %></h3>
     
+              <p class="card-text"><%= movie.year %></p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
 
-    <section id="section"></section>
-
-
-
- <script  type="module" src="../public/main.js"></script>   
-</body>
-</html>
+    <%-include("./partials/footer")%>
