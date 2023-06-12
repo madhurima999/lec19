@@ -40,7 +40,7 @@ router.get("/:productid", async(req,res)=>{
 
       const product = await Product.findById(productid).populate("reviews");
 
-      console.log(product)
+     // console.log(product)
 
       res.render("products/show", {product})
 
