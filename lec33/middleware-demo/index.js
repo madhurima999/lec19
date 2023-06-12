@@ -16,7 +16,7 @@ app.use((req,res,next)=>{
 
     console.log(" Second MiddleWare".red);
 
-    req.username =  "naman";
+    req.username =  "mg";
     next()
 })
 
