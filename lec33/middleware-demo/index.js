@@ -40,7 +40,7 @@ const verify = (req,res,next)=>{
     
 }
 
-app.get("/secret",verify,cndkncdc,bcjdbcdjbcdj, (req,res)=>{
+app.get("/secret", (req,res)=>{
 
     res.send("this is some secret/sensitive information")
 
