@@ -13,7 +13,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/ecomm-careerbootcamp")
 
 //Routes
   const productRoutes = require("./routes/productRoutes");
-  const reviewRoutes = require("./routes/reviewRoutes")
+  const reviewRoutes = require("./routes/reviewRoutes");
 
 
 app.engine("ejs", ejsMate);
