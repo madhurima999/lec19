@@ -26,5 +26,10 @@ for(let i=0;i<9;i++){
 let div=document.createElement('div');
 div.className='alert'+i;
 div.innerHTML='<span>Hello</span>'+i
-document.body.append(div); 
+document.body.prepend(div); 
 }
+
+
+div.className='alert'+11;
+div.innerHTML='<span>Hello</span>'+11
+document.body.before(div); 
