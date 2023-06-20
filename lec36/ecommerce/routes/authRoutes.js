@@ -69,7 +69,7 @@ router.get("/logout", (req,res)=>{
         if(err) {return next(err)};
 
         req.flash("success", "Goodbye see you again!");
-        res.redirect("/login")
+        res.redirect("/login");
     })
 })
 
