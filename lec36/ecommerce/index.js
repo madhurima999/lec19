@@ -68,4 +68,4 @@ app.use(reviewRoutes)
 app.use(authRoutes)
 
 
-app.listen(port, () => console.log(`Server listening at http://localhost:5000`.red))
+app.listen(port, () => console.log(`Server listening at http://localhost:3000`.red))
