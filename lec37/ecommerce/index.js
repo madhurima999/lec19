@@ -12,7 +12,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/User")
 const port = 3000;
 
-mongoose.connect("mongodb://127.0.0.1:27017/ecommdb")
+mongoose.connect("mongodb://127.0.0.1:27017/ecomm-careerbootcamp")
 .then(()=> console.log("db connected sucessfully".blue))
 .catch((err)=> console.log(err));
 
@@ -37,7 +37,8 @@ passport.deserializeUser(User.deserializeUser());
 //Routes
   const productRoutes = require("./routes/productRoutes");
   const reviewRoutes = require("./routes/reviewRoutes");
-  const authRoutes = require("./routes/authRoutes")
+  const authRoutes = require("./routes/authRoutes");
+  const cartRoutes = require("./routes/cartRoutes")
 
 
 app.engine("ejs", ejsMate);
@@ -66,6 +67,13 @@ app.use((req,res,next)=>{
 app.use("/products",productRoutes)
 app.use(reviewRoutes)
 app.use(authRoutes)
+app.use(cartRoutes)
+
+
+app.get("/", (req,res)=>{
+
+res.render("homePage")
+})
 
 
 app.listen(port, () => console.log(`Server listening at http://localhost:3000`.red))
