@@ -10,7 +10,7 @@ const flash = require('connect-flash');
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/User")
-const port = 3000;
+const port = 4000;
 
 mongoose.connect("mongodb://127.0.0.1:27017/ecomm-careerbootcamp")
 .then(()=> console.log("db connected sucessfully".blue))
@@ -77,4 +77,4 @@ res.render("homePage")
 })
 
 
-app.listen(port, () => console.log(`Server listening at http://localhost:3000`.red))
+app.listen(port, () => console.log(`Server listening at http://localhost:4000`.red))
