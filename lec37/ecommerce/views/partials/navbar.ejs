@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: steelblue;color:white;font-size:24px; padding:10px">
+<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: rgb(19, 106, 177);color:white;font-size:24px; padding:10px">
   <div class="container">
     <a class="navbar-brand" href="#">Shopping Cart</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,33 +17,42 @@
         </li>
       </ul>
 
-      <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
-        <% if(newUser){ %>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+       <% if(newUser){ %>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/products/user/cart"><i class="fa-solid fa-cart-shopping"></i> <sup><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><%= currentUser.cart.length %></span></sup>  </a>
+
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:black"><%=newUser.username.toUpperCase() %></a>
+            <a class="nav-link" href="#"> <%= currentUser.username %>
+            </a>
+
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/logout">Signout</a>
+            <a class="nav-link" href="/logout"> Logout </a>
+
+            
+
           </li>
+       <% } else { %>
 
-        <%}
-        else {%>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/login"> Login </a>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/register">SignUp</a>
-        </li>
-        <% } %>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/products/user/cart">Cart</a>
         </li>
 
-      </ul>
+           
+        <li class="nav-item">
+          <a class="nav-link" href="/register"> Signup </a>
 
+        </li>     
+
+  <%  } %>
+
+  </ul>
     </div>
   </div>
 </nav>
