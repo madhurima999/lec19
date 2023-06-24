@@ -22,4 +22,5 @@ router.post("/products/:productid/review",isLoggedIn,  async(req,res)=>{
 
      res.redirect(`/products/${productid}`)
 })
+
 module.exports = router

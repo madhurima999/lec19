@@ -1,4 +1,3 @@
-
 const mongoose = require("mongoose");
 const passportLocalMongoose = require('passport-local-mongoose');
 
@@ -19,7 +18,7 @@ const userSchema = new mongoose.Schema({
             count : {
                 type:Number,
                 default: 1,
-                min: [0, "Quantity cannot be less than 1"]
+                min: [0, "Quantity cannot ne less than 1"]
             }
 
         }

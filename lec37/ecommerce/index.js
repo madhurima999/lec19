@@ -44,6 +44,7 @@ passport.deserializeUser(User.deserializeUser());
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"))
+app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride("_method"))
 
@@ -76,4 +77,4 @@ res.render("homePage")
 })
 
 
-app.listen(port, () => console.log(`Server listening at http://localhost:3000`.red))
+app.listen(port, () => console.log(`Server listening at http://localhost:5000`.red))
