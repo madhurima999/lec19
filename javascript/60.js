@@ -1,14 +1,14 @@
-setTimeout(()=>{
-    console.log("ss")
-},1000)
+// setTimeout(()=>{
+//     console.log("ss")
+// },1000)
 
-try{
+// try{
     
-    console.log(rahul)
-}catch(error){
-    console.log(error)
-}
+//     console.log(rahul)
+// }catch(error){
+//     console.log(error)
+// }
 
-setTimeout(()=>{
-    console.log("ok")
-},2000)
+// setTimeout(()=>{
+//     console.log("ok")
+// },2000)
