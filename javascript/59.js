@@ -6,7 +6,7 @@ async function harry() {
     })
 
     let bangaloreWeather = new Promise((resolve, reject) => {
-            setTimeout(() => {
+             setTimeout(() => {
                     resolve("21 Deg")
             }, 5000)
     })
@@ -21,15 +21,16 @@ async function harry() {
     console.log("Fetched Bangalore Weather: " + bangaloreW)
     return [delhiW, bangaloreW]
 }
+harry();
 
-const cherry = async () => {
-    console.log("Hey I am cherry and I am waiting ")
-}
+// const cherry = async () => {
+//     console.log("Hey I am cherry and I am waiting ")
+// }
 
-const main1 = async () => {
-    console.log("Welcome to weather control room")
-    let a = await harry()
-    let b = await cherry()
+// const main1 = async () => {
+//     console.log("Welcome to weather control room")
+//     let a = await harry()
+//     let b = await cherry()
 
-}
-main1()
+// }
+// main1()
