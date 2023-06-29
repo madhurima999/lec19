@@ -21,16 +21,18 @@ async function harry() {
     console.log("Fetched Bangalore Weather: " + bangaloreW)
     return [delhiW, bangaloreW]
 }
-harry();
+// harry();
 
-// const cherry = async () => {
-//     console.log("Hey I am cherry and I am waiting ")
-// }
+const cherry = async () => {
+    console.log("Hey I am cherry and I am waiting ")
+}
+ 
+const main1 = async () => {
+    console.log("Welcome to weather control room")
+    let a = await harry()
+    let b = await cherry()
 
-// const main1 = async () => {
-//     console.log("Welcome to weather control room")
-//     let a = await harry()
-//     let b = await cherry()
+}
+main1()
 
-// }
-// main1()
+// cherry()
