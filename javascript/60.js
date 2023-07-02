@@ -29,4 +29,4 @@ const main1=async()=>{
     console.log(a)
 }
 
-main1()
+main1() 
