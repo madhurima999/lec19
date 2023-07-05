@@ -66,7 +66,7 @@ app.use((req,res,next)=>{
 
 // routes middleware
 app.use("/products",productRoutes)
-app.use(reviewRoutes)
+app.use(reviewRoutes) 
 app.use(authRoutes)
 app.use(cartRoutes)
 
