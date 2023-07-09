@@ -6,8 +6,22 @@
 //     console.log(value2)
 // })
 
-let options={
-    method:"POST",
-    headers:{"Content-type":"application/json"
-     }
-}
+// let options={
+//     method:"POST",
+//     headers:{"Content-type":"application/json"
+//      }
+// }
+
+let url="https://kontests.net/api/v1/all"
+let response=fetch(url)
+response.then((v)=>{
+    // console.log(v)
+    return v.json()
+}).then((contests)=>{
+    console.log(contests)
+    for(item in contests){
+        console.log(item)
+    }
+})
+
+cardContainer.innerHTML="allcards"
