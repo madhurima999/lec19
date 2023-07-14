@@ -13,7 +13,21 @@ setInterval(()=>{
     let d=new Date()
     // document.write(d.getTime())
 time.innerHTML=d.toDateString()+" "+d.toTimeString()
-},100)
+},1000)
+
+const setAlarm=(seconds)=>{
+    today=new Date()
+    setTimeout(()=>{
+        play()
+    },seconds*1000)
+    setInterval(()=>{
+        alarm.innerHTML="alarm rining in"+ "seconds"
+    })
+}
+
 // setTimeout(()=>{
 //     play()
 // },2000);
+
+let s=prompt("after how many minutes do u want an alarm");
+setAlarm(parseInt(s))
